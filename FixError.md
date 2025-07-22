@@ -1,5 +1,37 @@
 # 책 출간 후 오류가 발견된 부분을 수정합니다.
 
+## p7
+원문
+```
+$ poetry shell
+Creating virtualenv fastapi-ca-6_... in /Users/name/Library/Caches/pypoetry/virtualenvs
+Spawning shell within /Users/name/Library/Caches/pypoetry/virtualenvs/fastapi-ca-6_...
+
+$ emulate bash -c '. /Users/name/Library/Caches/pypoetry/virtualenvs/fastapi-ca-6_.../bin/activate
+
+(fastapi-ca) $
+```
+
+수정
+```
+$ poetry shell
+**Looks like you're trying to use a Poetry command that is not available.**
+
+Since Poetry (2.0.0), the shell command is not installed by default. You can use,
+
+  - the new env activate command (recommended); or
+  - the shell plugin to install the shell command
+
+Documentation: https://python-poetry.org/docs/managing-environments/#activating-the-environment
+
+Note that the env activate command is not a direct replacement for shell command.
+
+$ poetry env use python3.11
+$ poetry env list --full-path
+/Users/jisu/Library/Caches/pypoetry/virtualenvs/fastapi-ca-xxx...-py3.11 (Activated)
+$ emulate bash -c '/.../bin/activate'
+```
+
 ## p49. 코드 3.13
 원문
 ```
